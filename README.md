@@ -25,6 +25,19 @@ This command automatically:
 - Configures the plugin in `tauri.conf.json`
 - Installs the required npm package
 
+3. Configure permissions in `src-tauri/capabilities/default.json`:
+```json
+{
+  "permissions": [
+    "core:default",
+    "opener:default",
+    "opener:allow-open-url",
+    "opener:allow-open-path",
+    "opener:allow-default-urls"
+  ]
+}
+```
+
 ## Usage Example
 
 Here's how to use the opener plugin in your React component:

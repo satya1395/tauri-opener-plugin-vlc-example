@@ -8,7 +8,7 @@ interface VideoPlayerProps {
 
 export default function VideoPlayer({ videoUrl, onClose }: VideoPlayerProps) {
   // Create the proxy URL once, with a single encode
-  const proxyUrl = `/api/proxy?url=${encodeURIComponent(videoUrl)}`;
+  //const proxyUrl = `/api/proxy?url=${encodeURIComponent(videoUrl)}`;
   
   return (
     <div className="fixed inset-0 bg-black flex flex-col items-center justify-center">
@@ -20,7 +20,7 @@ export default function VideoPlayer({ videoUrl, onClose }: VideoPlayerProps) {
       </button>
       <ReactPlayer 
         // Use the proxyUrl directly - don't encode again
-        url={proxyUrl}
+        url={videoUrl}
         playing={true}
         controls={true}
         width="80%"
